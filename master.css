@@ -1,0 +1,31 @@
+/* Any "head" classes are center aligned. */
+.head {
+    text-align: center;
+}
+
+/* The following are is the CSS for the site wide navigation bar. */
+ul.navBar {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 7%; /* seems like a good width */
+    background-color: #eeeeee;
+    height: 100%; /* fill the page, from top to bottom */
+    position: fixed; /* Make it stick, even on scroll */
+    overflow: auto; /* Enable scrolling if the sidenav has too much content */
+}   
+
+/* Make the list items look nice in the nav bar */
+li a {
+    display: block;
+    color: #000;
+    padding: 8px 16px;
+    text-decoration: none;
+}
+
+/* Change the list item color on hover */
+li a:hover {
+    background-color: #555;
+    color: white;
+}
+/* End navigation bar */
