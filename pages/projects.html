@@ -7,7 +7,27 @@
 
     <link rel="stylesheet" href="../master.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">  
+
     <title>Griffin Leclerc's Projects</title>
+
+    <style>
+        .software {
+            text-align: center;
+            color: #007910;
+        }
+        .entry {
+            padding: 20, 40;
+            text-align: left;
+        }
+
+        div.wrapper {
+            margin: 0 auto;
+            width: max-content;
+            padding-top: 40px;
+            padding-bottom: 40px;
+        }
+    </style>
+
 </head>
 <body>
     <ul class="navBar">
@@ -19,10 +39,79 @@
     <h1 class = "head">
         Projects
     </h1>
-    <p align="center">
-        Hello again friend! It seems you are viewing some content that is not yet complete. <br />
-        Thats alright though, I'm sure it will be completed soon.
-    </p>
+
+    <div class="wrapper">
+        <h3 class = "software">
+            Weather Sender
+        </h3>
+        <p class = "entry">
+            Too long had I been burdened by inaccurate or bloated weather services. <br />
+            So I devised a plan, a plan in which I would send myself the weather. <br />
+            <br />
+            Thanks to the wonderful website <a href="https://wttr.in">wttr.in</a>, <br />
+            I was able to gather weather data in json format: <a href="https://wttr.in/?format=j1">wttr.in/?format=j1</a><br />
+            And it was simple once I located the information I was interested in. <br />
+            <br />
+            Thanks to mym phone provider for allowing me to sent texts over SMTP, <br />
+            I am able to notify myself of the weather each moening.<br />
+            <br />
+            In addition to learning more about json, I learned about the use of configuration <br />
+            files and bash scripting.<br />
+            <br />
+            I decided it best to use a configuration file for users to specify their location <br />
+            and recipients, rather than having them edit the script directly. <br />
+            I wrote bash script to first generate the configuration file, request (and wait for) <br />
+            the user fill it in, then run the script. <br />
+            <br />
+            Finally, in order to protect the user's privacy, the script requires the user to <br />
+            set two system environment variables to their email address and password. <br />
+            This discourages users from storing their sensitive information in plain text. <br />
+            <br />
+            The source code can be found <a href="https://github.com/GriffinLeclerc/Weather-Sender">here</a>.
+        </p>
+    </div>
+
+    <div class="wrapper">
+        <h3 class = "software">
+            GriffinLeclerc.github.io
+        </h3>
+        <p class = "entry">
+            My only experience with HTML was in one UNH course, IT 403. <br />
+            While it taught us the basic principles, and had us degign a few websites, <br />
+            I did not take away much. <br />
+            <br />
+            So I set asside some time to make this personal website, and here we are. <br />
+            Theres no sense linking it, because you're already here. However,<br />
+            <br />
+            The source code can be found <a href="https://github.com/GriffinLeclerc/GriffinLeclerc.github.io">here</a>.
+        </p>
+    </div>
+
+    <div class="wrapper">
+        <h3 class = "software">
+            Tic Tac Toe
+        </h3>
+        <p class = "entry">
+            A very simple command line Tic Tac Toe game. <br />
+            It was written, frankly, because I had nothing to do for an evening. <br />
+            <br />
+            My intent is to use it for a simple introduction to machine learning for myself. <br />
+            But we'll cross that bridge when we come to it. <br />
+            <br />
+            The source code can be found <a href="https://github.com/GriffinLeclerc/Tic-Tac-Toe">here</a>.
+        </p>
+    </div>
     
 </body>
 </html>
+
+<!--
+<div class="wrapper">
+    <h3 class = "software">
+        The title of the project.
+    </h3>
+    <p class = "entry">
+        A description of the project.
+    </p>
+</div>
+-->

@@ -1,5 +1,5 @@
 /* Any "head" classes are center aligned. */
-.head {
+h1.head {
     text-align: center;
 }
 
