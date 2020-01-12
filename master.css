@@ -36,3 +36,7 @@ div.intro {
     width: max-content;
     padding-top: 5px;
 }
+
+img {
+    image-orientation: from-image;
+}

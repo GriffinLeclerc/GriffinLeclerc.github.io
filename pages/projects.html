@@ -38,6 +38,7 @@
         div.wrapper {
             margin: 0 auto;
             width: max-content;
+            height: max-content;
             padding-top: 40px;
             padding-bottom: 40px;
         }
@@ -49,6 +50,14 @@
 
         div.entry {
             float: right;
+            width: max-content;
+            height: max-content;
+        }
+
+        div.video {
+            margin-right: 20px;
+            display: inline-block;
+            padding-bottom: 160px;
         }
 
     </style>
@@ -77,6 +86,40 @@
     </div>
 
     <div class="wrapper">
+        <h3 class = "physical">
+            UNH Tech Camp Capstone
+        </h3>
+        <div class="video">
+            <video width="560" height="335" controls><source src="../res/projects/Trains in motion.mp4" type="video/mp4"></video>
+        </div>
+        <div class = "entry">
+            <p class = "entry">
+                In the summer of 2019 I was a volunteer staff member at UNH Tech Camp, a week long <br />
+                summer camp for middle and high school students. During this time, various instructors <br />
+                would teach the students about various STEM topics. I personally lead the Computer Science <br />
+                portion, where I instructed 15 students about programming basics. I also assisted with the <br />
+                Networking and Electrical Engineering portions of the program. <br />
+                <br />
+                At the end of the program, students would display their knowledge to their parents and peers <br />
+                in an end of tech camp showcase. Myself and a few of my coulegues created the IOL's capstone <br />
+                showcase. <br />
+                <br />
+                We began by familiarizing ourselves with Raspberry Pi's and Arduino. Using the <a href="https://www.dexterindustries.com/arduberry/" target="_blank">Arduberry</a> shield, <br />
+                we intercepted various currents to the train set and used them to manipulate the trains. <br />
+                Six sets of two relays connected to the Pi's performed the following functions: <br />
+                Turning the track on and off by disconencting the main power. <br />
+                Increasing or decreasing the speed of the trains by changing the voltage between 5 and 10 volts. <br />
+                Changing direction of the trains by swapping the current to each track from + to - and vice versa. <br />
+                Changing the direction of three forks by providing a burst of voltage to the track's magnetic coil. <br />
+                Finally there was one Raspberry Pi deemed the Master Pi. This Pi maintained ssh connections to the <br />
+                others to easily reset the puzzle on completion. <br />
+                <br />
+                Students would need to use all of the Raspberry Pi's to complete a timing based puzzle. <br />
+            </p>
+        </div>
+    </div>
+
+    <div class="wrapper">
         <h3 class = "software">
             Weather Sender
         </h3>
@@ -91,8 +134,8 @@
             Thanks to my phone provider for allowing me to sent texts over SMTP, <br />
             I am able to notify myself of the weather each morning.<br />
             <br />
-            In addition to learning more about json, I learned about the use of configuration <br />
-            files and bash scripting.<br />
+            In addition to learning more about json, I learned about the use of external <br />
+            configuration files and bash scripting.<br />
             <br />
             I decided it best to use a configuration file for users to specify their location <br />
             and recipients, rather than having them edit the script directly. <br />
@@ -112,7 +155,7 @@
             Eagle Scout Service Project
         </h3>
         <div class="picture">
-          <img width="400" height="300" src="../res/images/Eagle Scout Service Project.jpg" alt="picture" class="Eagle Scout Service Project">
+          <img width="400" height="300" src="../res/images/Eagle Scout Service Project.jpg" alt="Eagle Scout Service Project">
         </div>
         <div class="entry">
             <p class="entry">
