@@ -98,18 +98,18 @@
                 In the summer of 2019, I was a volunteer staff member at UNH Tech Camp, a week long <br />
                 summer camp for middle and high school students. The tech camp experience involves various <br />
                 instructors who teach students about various STEM topics. I personally led the Computer Science <br />
-                portion, where I instructed 15 students about programming basics. I supported with the <br />
+                portion, where I instructed 15 students about programming basics. I also supported the <br />
                 Networking and Electrical Engineering portions of the program. <br />
                 <br />
                 We began by familiarizing ourselves with Raspberry Pi's and Arduino. Using the <a href="https://www.dexterindustries.com/arduberry/" target="_blank">Arduberry</a> shield, <br />
                 we intercepted various currents to the train set and used them to manipulate the trains. <br />
                 Six sets of two relays connected to the Pi's performed the following functions: <br />
-                Turning the track on and off by disconencting the main power; <br />
-                Increasing or decreasing the speed of the trains by changing the voltage between 5 and 10 volts; <br />
+                Turning the trains on and off by disconencting the main power to/from the track; <br />
+                Increasing or decreasing the speed of the trains by changing the supplied voltage between 5 and 10 volts; <br />
                 Changing direction of the trains by swapping the current to each track from + to - and vice versa; <br />
-                Changing the direction of three forks by providing a burst of voltage to the track's magnetic coil; <br />
+                Changing the direction of three forks by providing an electric pulse to the track's magnetic coil; <br />
                 Finally there was one Raspberry Pi deemed the Master Pi. This Pi maintained ssh connections to the <br />
-                others to easily reset the puzzle on completion. <br />
+                others for ease of access/calibration. <br />
                 <br />
                 Students were required to use all of the Raspberry Pi's to complete a timing-based puzzle. <br />
                 <br />
@@ -140,7 +140,8 @@
             I decided it best to use a configuration file for users to specify their location <br />
             and recipients, rather than having them edit the script directly. <br />
             I then wrote bash script to first generate the configuration file, request (and wait for) <br />
-            the user to fill relevant information, then run the script. <br />
+            the user to fill relevant information, then execute the weather sending portion of the <br />
+            script using that information. <br />
             <br />
             Finally, in order to protect the user's privacy, the script requires the user to <br />
             create two system environment variables to access their email address and password. <br />
