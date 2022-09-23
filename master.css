@@ -69,7 +69,7 @@ div.intro {
     position: sticky;
     top: 0;
     overflow: hidden;
-  }  
+  }
 
   li {
     float: left;
@@ -89,6 +89,4 @@ div.intro {
     color: white;
   }
   /* End navigation bar */
-
-  
 }

@@ -63,11 +63,11 @@
 <body>
     <ul class="navBar">
         <li class ="navElement"><a href="../index.html">Griffin</a></li>
-        <li class ="navElement"><a href="publications.html">Publications</a></li>
-        <li class ="navElement"><a href="projects.html">Projects</a></li>
-        <li class ="navElement"><a href="awards.html">Awards</a></li>
+        <li class ="navElement"><a href="./articles.html">Articles</a></li>
+        <li class ="navElement"><a href="./projects.html">Projects</a></li>
+        <li class ="navElement"><a href="./awards.html">Awards</a></li>
         <li class ="navElement"><a href="../res/Resume Master.pdf" target="_blank">Resume</a></li>
-    </ul>
+      </ul>
     <h1 class = "head">
         Projects
     </h1>
@@ -82,13 +82,51 @@
         </p>
     </div>
 
+    <div class="wrapper">
+        <h3 class = "software">
+            Experimental Analysis of the Performance and Scalability of <br />
+            Network Time Security for the Network Time Protocol
+        </h3>
+        <div class="picture">
+            <img width="490" height="421" src="../res/images/NTS Overview.png-1.png" alt="High Performance Computing Cluster">
+            <br /><br /><br /><br /><br />
+        </div>
+        <div class = "entry">
+            <p class = "entry">
+            At the end of 2021, I decided the focus of masters research: timing protocol performance. <br />
+            Specifically, how the authentication mechanisms introduced by Network Time Security (NTS) effected the performance <br />
+            of networked time transfer when compared to NTPv4. <br />
+            <br />
+            Being familiar with the mechanisms of IEEE 1588 and 802.1AS thanks to my time at the University of New Hampshire <br />
+            Interoperability Laboratory, I was able to quickly understand NTP and NTS and began research almost immediately. <br />
+            <br />
+            An open source implementation of NTS had been previously developed by Cloudflare and was readily available. By augmenting <br />
+            this implementation, known as CFNTS, with Rust's builtin benchmarking framework, Cargo Bench, we were able to measure <br />
+            discrete time intervals on all machines in the secure time domain and compare their performance to unauthenticated NTP. <br />
+            <br />
+            This study determines both the performance and scalability of NTS, so two separate experiments were developed to complete <br /> 
+            each of these objectives individually. The first experiment utilized one client connected to one server in an unloaded <br />
+            environment to measure performance of NTS. The second suite implemented a many-to-one pattern where clients transmitted an <br />
+            increasing number of requests per second to a single server in order to simulate a large network and measure scalability of NTS. <br />
+            <br />
+            After a few months, myself and my academic advisor, Doctor Radim Bartos, had completed our research work. <br />
+            the "Experimental Analysis of the Performance and Scalability of Network Time Security for the Network Time Protocol". <br />
+            <br />
+            I am pleased to announce the acceptance of this work into the International IEEE Symposium on Precision Clock Synchronization <br />
+            for Measurement, Control, and Communication (ISPCS), where I will present our findings in Vienna, Austria in October 2022.<br />
+            <br />
+            The final draft of this research work is available <a href="../res/projects/ISPCS 2022.pdf" target="_blank">here</a>. <br />
+            The augmented version of CFNTS is available <a href="https://github.com/GriffinLeclerc/cfnts" target="_blank">here</a>.
+            </p>
+        </div>
+    </div>
     
     <div class="wrapper">
         <h3 class = "physical">
-            High Performance Computing Capstone
+            High Performance Computing Cluster Capstone
         </h3>
         <div class="picture">
-            <img width="509" height="311" src="../res/images/HPC Cluster.png" alt="High Performance Computing Cluster">
+            <img width="445" height="311" src="../res/images/HPC Cluster.png" alt="High Performance Computing Cluster">
         </div>
         <div class = "entry">
             <p class = "entry">
@@ -129,7 +167,7 @@
                 We began by familiarizing ourselves with Raspberry Pi's and Arduino. Using the <a href="https://www.dexterindustries.com/arduberry/" target="_blank">Arduberry</a> shield, <br />
                 we intercepted various currents to the train set and used them to manipulate the trains. <br />
                 Six sets of two relays connected to the Pi's performed the following functions: <br />
-                Turning the trains on and off by disconencting the main power to/from the track; <br />
+                Turning the trains on and off by disconnecting the main power to/from the track; <br />
                 Increasing or decreasing the speed of the trains by changing the supplied voltage between 5 and 10 volts; <br />
                 Changing direction of the trains by swapping the current to each track from + to - and vice versa; <br />
                 Changing the direction of three forks by providing an electric pulse to the track's magnetic coil. <br />
@@ -140,6 +178,33 @@
                 <br />
                 At the conclusion, students displayed their knowledge to their parents and peers <br />
                 in an showcase finale. Myself and a team colleagues developed this capstone showcase. <br />
+            </p>
+        </div>
+    </div>
+
+    <div class="wrapper">
+        <h3 class = "physical">
+            Eagle Scout Service Project
+        </h3>
+        <div class="picture">
+          <img width="400" height="300" src="../res/images/Eagle Scout Service Project.jpg" alt="Eagle Scout Service Project">
+        </div>
+        <div class="entry">
+            <p class="entry">
+                In early October 2014, I was a Life Scout in Boy Scout Troop 292, Hooksett NH. <br />
+                A few of my colleagues were underway with their Eagle Scout service projects. <br />
+                These projects included construction of an ice skating hut on the shore of a local pond, <br />
+                and refurbishment of a popular walking path in the town forest. <br />
+                <br />
+                I wanted to complete a less traditional project that would immediately and directly impact others. <br />
+                <br />
+                After some research, I contacted the executive director of the <a href="https://ctac-nh.org/" target="_blank">Computer Technology Assistance Corperation</a>. <br />
+                They allowed me to use their space over three working days to store, assess, and refurbish <br />
+                147 computers I had collected from members of the public who donated their old systems. <br />
+                <br />
+                Of the 147 collected, 82 were made fully functional and ready for distribution, 37 were disassembled for <br />
+                functional components, and 28 were disassembled and recycled. All 82 were distributed to low income <br />
+                families to support their student's educational experience. <br />
             </p>
         </div>
     </div>
@@ -177,39 +242,12 @@
     </div>
 
     <div class="wrapper">
-        <h3 class = "physical">
-            Eagle Scout Service Project
-        </h3>
-        <div class="picture">
-          <img width="400" height="300" src="../res/images/Eagle Scout Service Project.jpg" alt="Eagle Scout Service Project">
-        </div>
-        <div class="entry">
-            <p class="entry">
-                In early October 2014, I was a Life Scout in Boy Scout Troop 292, Hooksett NH. <br />
-                A few of my colleagues were underway with their Eagle Scout service projects. <br />
-                These projects included construction of an ice skating hut on the shore of a local pond, <br />
-                and refurbishment of a popular walking path in the town forest. <br />
-                <br />
-                I wanted to complete a less traditional project that would immediately and directly impact others. <br />
-                <br />
-                After some research, I contacted the executive director of the <a href="https://ctac-nh.org/" target="_blank">Computer Technology Assistance Corperation</a>. <br />
-                They allowed me to use their space over three working days to store, assess, and refurbish <br />
-                147 computers I had collected from members of the public who donated their old systems. <br />
-                <br />
-                Of the 147 collected, 82 were made fully functional and ready for distribution, 37 were disassembled for <br />
-                functional components, and 28 were disassembled and recycled. All 82 were distributed to low income <br />
-                families to support their student's educational experience. <br />
-            </p>
-        </div>
-    </div>
-
-    <div class="wrapper">
         <h3 class = "software">
             GriffinLeclerc.github.io
         </h3>
         <p class = "entry">
-            My HTML experience was limited to one UNH course, IT403. <br />
-            While I learned the basic design principles, the experience was limited. <br />
+            My HTML experience was limited to one introductory college course. <br />
+            While I learned basic HTML design principles, the experience was limited. <br />
             <br />
             Consequently, I designed this personal website, to showcase my experience, projects, <br />
             publications, and awards that cannot be included on a resume of reasonable size. <br />
@@ -219,7 +257,7 @@
         </p>
     </div>
 
-    <div class="wrapper">
+    <!-- <div class="wrapper">
         <h3 class = "physical">
             Universal Task Instructions
         </h3>
@@ -273,7 +311,7 @@
     </div>
     
 </body>
-</html>
+</html> -->
 
 <!--
 <div class="wrapper">
