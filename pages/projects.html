@@ -12,12 +12,18 @@
 
     <style>
         /* Header for a software based project */
-        .software {
+        .grid-software-title {
+            grid-column-start: 1;
+            grid-column-end: 3;
+            font-size: 25px;
             text-align: center;
             color: #007910;
         }
         /* Header for a non-software based project */
-        .physical {
+        .grid-physical-title {
+            grid-column-start: 1;
+            grid-column-end: 3;
+            font-size: 25px;
             text-align: center;
             color: #980000;
         }
@@ -30,297 +36,176 @@
             font-weight: bold;
             color: #980000;
         }
-
-        div.wrapper {
-            margin: 0 auto;
-            width: max-content;
-            height: max-content;
-            padding-top: 40px;
-            padding-bottom: 40px;
-        }
-
-        div.picture {
-            margin-right: 20px;
-            display: inline-block;
-            padding-bottom: 60px;
-        }
-
-        div.entry {
-            float: right;
-            width: max-content;
-            height: max-content;
-        }
-
-        div.video {
-            margin-right: 20px;
-            display: inline-block;
-            padding-bottom: 160px;
-        }
-
     </style>
 
 </head>
 <body>
-    <ul class="navBar">
-        <li class ="navElement"><a href="../index.html">Griffin</a></li>
-        <li class ="navElement"><a href="./articles.html">Articles</a></li>
-        <li class ="navElement"><a href="./projects.html">Projects</a></li>
-        <li class ="navElement"><a href="./awards.html">Awards</a></li>
-        <li class ="navElement"><a href="../res/Resume Master.pdf" target="_blank">Resume</a></li>
-      </ul>
-    <h1 class = "head">
-        Projects
-    </h1>
-    <div class="intro">
+<ul class="navBar">
+    <li class ="navElement"><a href="../index.html">Griffin</a></li>
+    <li class ="navElement"><a href="./articles.html">Articles</a></li>
+    <li class ="navElement"><a href="./projects.html">Projects</a></li>
+    <li class ="navElement"><a href="./awards.html">Awards</a></li>
+    <li class ="navElement"><a href="../res/Resume Master.pdf" target="_blank">Resume</a></li>
+</ul>
+
+
+<div class="grid-container">
+    <div class="grid-page-title">Projects</div>
+    <div class="grid-description">
+    <p>
+        <span class="green">Green</span> 
+        projects are primarily software based. <br />
+        <span class="red">Red</span> 
+        projects contain a minimal software component. <br />
+        <br />
+        This page showcases my academic and professional projects. Additional open source contributions can be found <a href="https://github.com/GriffinLeclerc">here</a>. <br />
+    </p>
+    </div>
+</div>
+
+<div class="grid-container">
+    <div class="grid-software-title">Experimental Analysis of the Performance and Scalability of <br />
+        Network Time Security for the Network Time Protocol (2022)</div>
+    <div class="grid-media"><img width="490" height="421" src="../res/images/NTS Overview.png-1.png" alt="High Performance Computing Cluster"></div>
+    <div class="grid-item">
         <p>
-            <span class="green">Green</span> 
-            projects are primarily software based. <br />
-            <span class="red">Red</span> 
-            projects contain a minimal software component. <br />
+            The focus of masters research: timing protocol performance. Specifically, how the authentication mechanisms introduced by Network Time Security (NTS) effected the performance of networked time transfer when compared to NTPv4.
             <br />
-            This page showcases my academic and professional projects. Additional open source contributions can be found <a href="https://github.com/GriffinLeclerc">here</a>. <br />
+            <br />
+            My familiarity with the mechanisms of IEEE 1588 and 802.1AS, thanks to my time at the University of New Hampshire Interoperability Laboratory, enabled me to quickly understand NTP and NTS and begin research almost immediately. <br />
+            <br />
+            An open source implementation of NTS had been previously developed by Cloudflare and was readily available. By augmenting this implementation, known as CFNTS, with Rust's built-in benchmarking framework, Cargo Bench, we were able to measure discrete time intervals on all machines in the secure time domain and compare their performance to unauthenticated NTP. 
+            <br />
+            <br />
+            This study determines both the performance and scalability of NTS, so two separate experiments were developed to complete each of these objectives individually. The first experiment utilized one client connected to one server in an unloaded environment to measure performance of NTS. The second suite implemented a many-to-one pattern where clients transmitted an increasing number of requests per second to a single server in order to simulate a large network and measure scalability of NTS. 
+            <br />
+            <br />
+            After four, my academic advisor, Doctor Radim Bartos, and I had completed our research work, the "Experimental Analysis of the Performance and Scalability of Network Time Security for the Network Time Protocol". 
+            <br />
+            <br />
+            I am pleased to announce the acceptance of this work into the International IEEE Symposium on Precision Clock Synchronization for Measurement, Control, and Communication (ISPCS), where I presented our findings in Vienna, Austria in October 2022.
+            <br />
+            <br />
+            The final draft of this research work is available <a href="../res/projects/ISPCS 2022.pdf" target="_blank">here</a>. 
+            <br />
+            The augmented version of CFNTS is available <a href="https://github.com/GriffinLeclerc/cfnts" target="_blank">here</a>.
         </p>
     </div>
+</div>
 
-    <div class="wrapper">
-        <h3 class = "software">
-            Experimental Analysis of the Performance and Scalability of <br />
-            Network Time Security for the Network Time Protocol (2022)
-        </h3>
-        <div class="picture">
-            <img width="490" height="421" src="../res/images/NTS Overview.png-1.png" alt="High Performance Computing Cluster">
-            <br /><br /><br /><br /><br />
-        </div>
-        <div class = "entry">
-            <p class = "entry">
-            The focus of masters research: timing protocol performance. Specifically, how the authentication <br />
-            mechanisms introduced by Network Time Security (NTS) effected the performance <br />
-            of networked time transfer when compared to NTPv4. <br />
-            <br />
-            My familiarity with the mechanisms of IEEE 1588 and 802.1AS, thanks to my time at the University of New Hampshire <br />
-            Interoperability Laboratory, enabled me to quickly understand NTP and NTS and begin research almost immediately. <br />
-            <br />
-            An open source implementation of NTS had been previously developed by Cloudflare and was readily available. By augmenting <br />
-            this implementation, known as CFNTS, with Rust's built-in benchmarking framework, Cargo Bench, we were able to measure <br />
-            discrete time intervals on all machines in the secure time domain and compare their performance to unauthenticated NTP. <br />
-            <br />
-            This study determines both the performance and scalability of NTS, so two separate experiments were developed to complete <br /> 
-            each of these objectives individually. The first experiment utilized one client connected to one server in an unloaded <br />
-            environment to measure performance of NTS. The second suite implemented a many-to-one pattern where clients transmitted an <br />
-            increasing number of requests per second to a single server in order to simulate a large network and measure scalability of NTS. <br />
-            <br />
-            After four, my academic advisor, Doctor Radim Bartos, and I had completed our research work, <br />
-            the "Experimental Analysis of the Performance and Scalability of Network Time Security for the Network Time Protocol". <br />
-            <br />
-            I am pleased to announce the acceptance of this work into the International IEEE Symposium on Precision Clock Synchronization <br />
-            for Measurement, Control, and Communication (ISPCS), where I presented our findings in Vienna, Austria in October 2022.<br />
-            <br />
-            The final draft of this research work is available <a href="../res/projects/ISPCS 2022.pdf" target="_blank">here</a>. <br />
-            The augmented version of CFNTS is available <a href="https://github.com/GriffinLeclerc/cfnts" target="_blank">here</a>.
-            </p>
-        </div>
+<div class="grid-container">
+    <div class="grid-physical-title">High Performance Computing Cluster Construction (2021)</div>
+    <div class="grid-media">
+        <img width="445" height="311" src="../res/images/HPC Cluster.png" alt="High Performance Computing Cluster">
     </div>
-    
-    <div class="wrapper">
-        <h3 class = "physical">
-            High Performance Computing Cluster Capstone (2021)
-        </h3>
-        <div class="picture">
-            <img width="445" height="311" src="../res/images/HPC Cluster.png" alt="High Performance Computing Cluster">
-        </div>
-        <div class = "entry">
-            <p class = "entry">
-                This project's goal was to design and construct a low cost, high performance computing <br />
-                (HPC) cluster for use by University of New Hampshire researchers looking to complete <br />
-                experiments involving intense computational components. <br />
-                <br />
-                The project cluster utilized six rack mounted servers, or nodes, reclaimed by the project's <br />
-                sponsor. These nodes were provisioned with a modern Linux operating system and networked together <br />
-                to form the project's computational cluster. <br />
-                <br />
-                The project demonstrates it is possible to construct high performance computer clusters using reclaimed <br /> 
-                technology, while achieving respectable performance at minimal cost. <br />
-                <br />
-                The complete explanation of the project methodology, performance benchmarking, and conclusions can be found <a href="../res/projects/hpc_poster_draft_7.0.pdf" target="_blank">here</a>. <br/>
-                <br />
-                This project was presented as part of the University of New Hampshire's Undergraduate Research Conference, <br />
-                as well as submitted to the PEARC 2021 conference and presented to the Northeast Cyberteam.
-            </p>
-        </div>
-    </div>
-
-    <div class="wrapper">
-        <h3 class = "physical">
-            UNH Tech Camp Capstone (2019)
-        </h3>
-        <div class="video">
-            <video controls muted width="560" height="335" controls><source src="../res/projects/Trains in motion.mp4" type="video/mp4"></video>
-        </div>
-        <div class = "entry">
-            <p class = "entry">
-                In the summer of 2019, I was a volunteer staff member at UNH Tech Camp, a week long <br />
-                summer camp for middle and high school students. The tech camp experience involves a variety of <br />
-                instructors who teach students about various STEM topics. I led the Computer Science <br />
-                portion, where I instructed 15 students about programming basics. I also supported the <br />
-                Networking and Electrical Engineering segments of the program. <br />
-                <br />
-                We began by familiarizing ourselves with Raspberry Pi's and Arduino. Using the <a href="https://www.dexterindustries.com/arduberry/" target="_blank">Arduberry</a> shield, <br />
-                we intercepted various currents to a train set and used them to manipulate the trains' movements. <br />
-                Six sets of two relays connected to the Pi's performed the following functions: <br />
-                Turning the trains on and off by disconnecting the main power to/from the track; <br />
-                Increasing or decreasing the speed of the trains by changing the supplied voltage between 5 and 10 volts; <br />
-                Changing direction of the trains by swapping the current to each track from + to - and vice versa; <br />
-                Changing the direction of three forks by providing an electric pulse to the track's magnetic coil. <br />
-                Finally, there was one Raspberry Pi deemed the Master Pi. This Pi maintained ssh connections to the <br />
-                others for ease of access/calibration. <br />
-                <br />
-                The final challenge required campers to use all of the Raspberry Pi's to complete a timing-based puzzle. <br />
-                <br />
-                At the conclusion, students displayed their knowledge to their parents and peers <br />
-                in an showcase finale. A team of IOL employees, including myself, developed this capstone showcase. <br />
-            </p>
-        </div>
-    </div>
-
-    <div class="wrapper">
-        <h3 class = "physical">
-            Eagle Scout Service Project (2014)
-        </h3>
-        <div class="picture">
-          <img width="400" height="300" src="../res/images/Eagle Scout Service Project.jpg" alt="Eagle Scout Service Project">
-        </div>
-        <div class="entry">
-            <p class="entry">
-                In early October 2014, I was a Life Scout in Boy Scout Troop 292, Hooksett NH. <br />
-                A few of my colleagues were underway with their Eagle Scout service projects, <br />
-                which included construction of an ice skating hut on the shore of a local pond, <br />
-                and refurbishment of a popular walking path in the town forest. <br />
-                <br />
-                I wanted to complete a less traditional project that would immediately and directly impact students <br />
-                belonging to low income families whose access to technology was limiting access to learning opportunities. <br />
-                <br />
-                After some research, and raising $1500 in grant funding and car washes, I contacted the executive director <br />
-                of the <a href="https://ctac-nh.org/" target="_blank">Computer Technology Assistance Corporation</a>, a non-profit with a similar mission.<br />
-                They allowed me to use their space over three working days to store, assess, and refurbish <br />
-                147 computers I had collected from members of the public who donated their older systems. <br />
-                <br />
-                Of the 147 collected, 82 were made fully functional and ready for distribution, 37 were disassembled for <br />
-                functional components, and 28 were disassembled and recycled. All 82 were distributed at no cost to low income <br />
-                families to support their student's educational experience. <br />
-            </p>
-        </div>
-    </div>
-
-    <div class="wrapper">
-        <h3 class = "software">
-            Weather Sender (2020)
-        </h3>
+    <div class="grid-item">
         <p class = "entry">
-            I was burdened by inaccurate or bloated weather services, <br />
-            so I devised a plan in which I would send myself the weather. <br />
+            This project's goal was to design and construct a low cost, high performance computing (HPC) cluster for use by University of New Hampshire researchers looking to complete experiments involving intense computational components. 
             <br />
+            <br />
+            The project cluster utilized six rack mounted servers, or nodes, reclaimed by the project's sponsor. These nodes were provisioned with a modern Linux operating system and networked together to form the project's computational cluster. 
+            <br />
+            <br />
+            The project demonstrates it is possible to construct high performance computer clusters using reclaimed technology, while achieving respectable performance at minimal cost.
+            <br />
+            The complete explanation of the project methodology, performance benchmarking, and conclusions can be found <a href="../res/projects/hpc_poster_draft_7.0.pdf" target="_blank">here</a>. <br/>
+            <br />
+            This project was presented as part of the University of New Hampshire's Undergraduate Research Conference, <br />
+            as well as submitted to the PEARC 2021 conference and presented to the Northeast Cyberteam.
+        </p>
+    </div>
+</div>
+
+<div class="grid-container">
+    <div class="grid-software-title">UNH Tech Camp Capstone (2019)</div>
+    <div class="grid-media">
+        <video controls muted width="560" height="335" controls><source src="../res/projects/Trains in motion.mp4" type="video/mp4"></video>
+    </div>
+    <div class="grid-item">
+        <p class = "entry">
+            In the summer of 2019, I was a volunteer staff member at UNH Tech Camp, a week long summer camp for middle and high school students. The tech camp experience involves a variety of instructors who teach students about various STEM topics. I led the Computer Science portion, where I instructed 15 students about programming basics. I also supported the Networking and Electrical Engineering segments of the program. 
+            <br />
+            <br />
+            We began by familiarizing ourselves with Raspberry Pi's and Arduino. Using the <a href="https://www.dexterindustries.com/arduberry/" target="_blank">Arduberry</a> shield, we intercepted various currents to a train set and used them to manipulate the trains' movements. Six sets of two relays connected to the Pi's performed the following functions: <br />
+            Turning the trains on and off by disconnecting the main power to/from the track; <br />
+            Increasing or decreasing the speed of the trains by changing the supplied voltage between 5 and 10 volts; <br />
+            Changing direction of the trains by swapping the current to each track from + to - and vice versa; <br />
+            Changing the direction of three forks by providing an electric pulse to the track's magnetic coil; <br />
+            Finally, there was one Raspberry Pi deemed the Master Pi. This Pi maintained ssh connections to the <br />
+            others for ease of access/calibration. 
+            <br />
+            <br />
+            The final challenge required campers to use all of the Raspberry Pi's to complete a timing-based puzzle. 
+            <br />
+            <br />
+            At the conclusion, students displayed their knowledge to their parents and peers in an showcase finale. A team of IOL employees, including myself, developed this capstone showcase.
+        </p>
+    </div>
+</div>
+
+<div class="grid-container">
+    <div class="grid-physical-title">Eagle Scout Service Project (2014)</div>
+    <div class="grid-media">
+        <img width="400" height="300" src="../res/images/Eagle Scout Service Project.jpg" alt="Eagle Scout Service Project">
+    </div>
+    <div class="grid-item">
+        <p class="entry">
+            In early October 2014, I was a Life Scout in Boy Scout Troop 292, Hooksett NH. A few of my colleagues were underway with their Eagle Scout service projects, which included construction of an ice skating hut on the shore of a local pond, and refurbishment of a popular walking path in the town forest. 
+            <br />
+            <br />
+            I wanted to complete a less traditional project that would immediately and directly impact students belonging to low income families whose access to technology was limiting access to learning opportunities. 
+            <br />
+            <br />
+            After some research, and raising $1500 in grant funding and car washes, I contacted the executive director of the <a href="https://ctac-nh.org/" target="_blank">Computer Technology Assistance Corporation</a>, a non-profit with a similar mission. They allowed me to use their space over three working days to store, assess, and refurbish 147 computers I had collected from members of the public who donated their older systems. 
+            <br />
+            <br />
+            Of the 147 collected, 82 were made fully functional and ready for distribution, 37 were disassembled for functional components, and 28 were disassembled and recycled. All 82 were distributed at no cost to low income families to support their student's educational experience.
+        </p>
+    </div>
+</div>
+
+<div class="grid-container">
+    <div class="grid-software-title">Weather Sender (2020)</div>
+    <div class="grid-media"></div>
+    <div class="grid-item">
+        <p class = "entry">
             Thanks to the website <a href="https://wttr.in" target="_blank">wttr.in</a>, I was able to gather weather data in json format: <br />
             <a href="https://wttr.in/?format=j1" target="_blank">wttr.in/?format=j1</a><br />
-            It was rather simple once I located the information I was interested in capturing. <br />
+            It was rather simple once I located the information I was interested in capturing. 
             <br />
-            Because my phone provider for allows sending of texts over SMTP, <br />
-            I am now able to notify myself of the weather conditions each morning.<br />
             <br />
-            In addition to learning more about json, I learned about the use of external <br />
-            configuration files and bash scripting.<br />
+            Because my phone provider for allows sending of texts over SMTP, I am now able to notify myself of the weather conditions each morning.
             <br />
-            I decided to use a configuration file for users to specify their location <br />
-            and recipients, rather than having them edit the script directly. <br />
-            I then wrote a bash script to first generate the configuration file, request (and wait for) <br />
-            the user to fill relevant information, then execute the weather sending portion of the <br />
-            script using that information. <br />
             <br />
-            Finally, in order to protect the user's privacy, the script requires the user to <br />
-            create two system environment variables to access their email address and password. <br />
-            This discourages users from storing their sensitive information in plain text. <br />
+            In addition to learning more about json, I learned about the use of external configuration files and bash scripting.
+            <br />
+            <br />
+            I decided to use a configuration file for users to specify their location and recipients, rather than having them edit the script directly. I then wrote a bash script to first generate the configuration file, request (and wait for) the user to fill relevant information, then execute the weather sending portion of the script using that information. 
+            <br />
+            <br />
+            Finally, in order to protect the user's privacy, the script requires the user to create two system environment variables to access their email address and password. This discourages users from storing their sensitive information in plain text. 
+            <br />
             <br />
             The source code can be found <a href="https://github.com/GriffinLeclerc/Weather-Sender" target="_blank">here</a>.
         </p>
     </div>
+</div>
 
-    <div class="wrapper">
-        <h3 class = "software">
-            GriffinLeclerc.github.io
-        </h3>
+<div class="grid-container">
+    <div class="grid-software-title">GriffinLeclerc.github.io (2020)</div>
+    <div class="grid-media"></div>
+    <div class="grid-item">
         <p class = "entry">
-            My HTML knowledge was limited to a single introductory college course. <br />
-            While I learned basic HTML design principles, the experience was limited. <br />
+            My HTML knowledge was limited to a single introductory college course. While I learned basic HTML design principles, the experience was limited. 
             <br />
-            Consequently, I designed this personal website to showcase my experience, projects, <br />
-            publications, and awards that cannot be included on a resume of reasonable size. <br />
+            <br />
+            Consequently, I designed this personal website to showcase my experience, projects, publications, and awards that cannot be included on a resume of reasonable size. 
+            <br />
             <br />
             The source code can be found <a href="https://github.com/GriffinLeclerc/GriffinLeclerc.github.io" target="_blank">here</a> and my resume can be accessed via the "Resume" tab.
         </p>
     </div>
-
-    <!-- <div class="wrapper">
-        <h3 class = "physical">
-            Universal Task Instructions
-        </h3>
-        <p class = "entry">
-            I was challenged to create a set of instructions that could be given to anyone, anywhere, <br />
-            that could be successfully executed without questions from the user. Students were encouraged to <br />
-            choose very simple task to ensure instructions were digestible to all who read them. <br />
-            <br />
-            I chose to instruct the installation of an extension for Google Chrome called <a href="https://chrome.google.com/webstore/detail/dark-reader/eimadpbcbfnmbkopoojfekhnkhdbieeh?hl=en-US" target="_blank">Dark Reader</a>. <br />
-            It adds CSS to any web page visited that alters light backgrounds to be dark, and dark text to be light. <br />
-            <br />
-            Through this assignment, I learned that it is very difficult to create anything that is completely universal, <br />
-            because no assumptions can be made regarding the knowledge of users. <br />
-            After including images detailing the installation process, users were able to complete the instructions much <br />
-            more quickly and effectively. I also learned the value of visual tools in developing effective instructions. <br />
-            <br />
-            I personally use the Dark Reader extension daily (or rather, nightly). This website is completely compatible <br />
-            with the extension. <br />
-            <br />
-            If you're interested in following my instructions, the final iteration can be found <a href="../res/projects/Instructions/How to Install a Dark Reader.pdf" target="_blank">here</a>. <br />
-            The usability testing report can be found <a href="../res/projects/Instructions/Usability Testing Report.pdf" target="_blank">here</a>.
-        </p>
-    </div>
-
-    <div class="wrapper">
-        <h3 class = "software">
-            Linear Bills
-        </h3>
-        <p class = "entry">
-            A very silly project. I wrote a scrtipt to extend the introduction song of <br />
-            Disney's <a href="https://billnye.com/the-science-guy" target="_blank">Bill Nye, the Science Guy</a>. <br />
-            <br />
-            Given a number, it repeats an audio sequence of "Bill! Bill! Bill! Bill!" that number or times. <br />
-            <br />
-            The source code can be found <a href="https://github.com/GriffinLeclerc/Linear-Bills" target="_blank">here</a>.
-        </p>
-    </div>
-
-    <div class="wrapper">
-        <h3 class = "software">
-            Tic Tac Toe
-        </h3>
-        <p class = "entry">
-            A very simple command line Tic Tac Toe game. <br />
-            It was written, frankly, out of boredom one evening. <br />
-            As it turns out, I was asked a similar challenge question <br />
-            in an employment interview a few weeks later. <br />
-            <br />
-            The source code can be found <a href="https://github.com/GriffinLeclerc/Tic-Tac-Toe" target="_blank">here</a>.
-        </p>
-    </div>
-    
-</body>
-</html> -->
-
-<!--
-<div class="wrapper">
-    <h3 class = "software">
-        The title of the project.
-    </h3>
-    <p class = "entry">
-        A description of the project.
-    </p>
 </div>
--->
+
+</body>
+</html>

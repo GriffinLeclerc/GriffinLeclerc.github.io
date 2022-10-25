@@ -11,16 +11,19 @@
     <title>Griffin Leclerc's Articles</title>
 
     <style>
-        .videoTitle {
+        .grid-video-title {
+            grid-column-start: 1;
+            grid-column-end: 3;
+            font-size: 25px;
             text-align: center;
             color: #001998;
         }
-        .articleTitle {
+        .grid-article-title {
+            grid-column-start: 1;
+            grid-column-end: 3;
+            font-size: 25px;
             text-align: center;
             color: #540098;
-        }
-        .entry {
-            text-align: left;
         }
 
         .blue{
@@ -36,236 +39,168 @@
             margin: 0 auto;
             width: max-content;
         }
-
-        @media only screen and (min-width: 1500px) {
-            div.wrapper {
-                margin: 0 auto;
-                width: max-content;
-                padding-top: 40px;
-                padding-bottom: 40px;
-            }
-        }
-
-        @media only screen and (max-width: 1500px) {
-            div.wrapper {
-                margin: 0 auto;
-                width: max-content;
-                padding-top: 80px;
-                padding-bottom: 80px;
-            }
-        }
-
-        
-        div.description {
-            float: right;
-        }
-
-        div.video {
-            margin-right: 20px;
-            display: inline-block;
-        }
-
     </style>
 </head>
 <body>
-    <ul class="navBar">
-        <li class ="navElement"><a href="../index.html">Griffin</a></li>
-        <li class ="navElement"><a href="./articles.html">Articles</a></li>
-        <li class ="navElement"><a href="./projects.html">Projects</a></li>
-        <li class ="navElement"><a href="./awards.html">Awards</a></li>
-        <li class ="navElement"><a href="../res/Resume Master.pdf" target="_blank">Resume</a></li>
-      </ul>
-    <h1 class = "head">
-        Articles
-    </h1>
-    <div class="intro">
-        <p>
-            <span class="blue">Blue</span> 
-            items are video based articles. <br />
-            <span class="purple">Purple</span> 
-            items are article-based. <br />
-        </p>
-    </div>
+<ul class="navBar">
+    <li class ="navElement"><a href="../index.html">Griffin</a></li>
+    <li class ="navElement"><a href="./articles.html">Articles</a></li>
+    <li class ="navElement"><a href="./projects.html">Projects</a></li>
+    <li class ="navElement"><a href="./awards.html">Awards</a></li>
+    <li class ="navElement"><a href="../res/Resume Master.pdf" target="_blank">Resume</a></li>
+</ul>
 
-    <div class="intro">
+<div class="grid-container">
+    <div class="grid-page-title">Articles</div>
+    <div class="grid-description">
+    <p>
+        <span class="blue">Blue</span> 
+        items are video based articles. <br />
+        <span class="purple">Purple</span> 
+        items are article-based. <br />
+    </p>
+    </div>
+    <div class="grid-description">
+    <p>
         This page displays a local copy of each article. <br \>
         Links to the articles in their external context are also provided.
+    </p>
     </div>
+</div>
 
-    <div class="wrapper">
-        <h3 class = "articleTitle">
-            All in the Timing (2022)
-        </h3>
-        <p class = "entry">
-            My first published research work, the "Experimental Analysis of the Performance and Scalability <br />
-             of Network Time Security for the Network Time Protocol". <br />
-            More information about this research can be found in the <a href="./projects.html">projects</a> section of this website. <br />
+<div class="grid-container">
+    <div class="grid-article-title">All in the Timing (2022)</div>
+    <div class="grid-media"></div>
+    <div class="grid-item">
+        <p>
+            My first published research work, the "Experimental Analysis of the Performance and Scalability of Network Time Security for the Network Time Protocol". More information about this research can be found in the <a href="./projects.html">projects</a> section of this website. 
             <br />
-            This research was partially funded by a gift from the Internet Society. In commemoration, <br />
-            the University of New Hampshire published an article describing the research field and my <br /> 
-            particular experience. <br /> 
+            <br />
+            This research was partially funded by a gift from the Internet Society. In commemoration, the University of New Hampshire published an article describing the research field and my particular experience. 
+            <br /> 
             <br />
             A PDF of the article is available <a href="../res/articles/All in the Timing UNH Today.pdf" target="_blank">here</a>.<br /> 
             The UNH Today article can be viewed <a href="https://www.unh.edu/unhtoday/2021/11/all-timing" target="_blank">here</a>.
         </p>
     </div>
+</div>
 
-    <div class="wrapper">
-        <h3 class = "videoTitle">
-            UNH IOL Student Spotlight (2020)
-        </h3>
-        <div class="video">
-            <video id="iolSpot" width="560" height="315" controls><source src="../res/articles/IOL Spotlight.mp4" type="video/mp4"></video>
-        </div>
-        <div class="description">
-            <p>
-                Of the UNH IOL's 125 student employees, I was chosen as one of two accomplished <br />
-                students to participate in a Student Spotlight, a short video showcasing my work <br />
-                and campus life at the University of New Hampshire. <br />
-                <br />
+<div class="grid-container">
+    <div class="grid-video-title">UNH IOL Student Spotlight (2020)</div>
+    <div class="grid-media"><video id="iol-spot" width="560" height="315" controls><source src="../res/articles/IOL Spotlight.mp4" type="video/mp4"></video></div>
+    <div class="grid-item">
+        <p>
+            Of the UNH IOL's 125 student employees, I was chosen as one of two accomplished students to participate in a Student Spotlight, a short video showcasing my work and campus life at the University of New Hampshire. 
+            <br />
+            <div class="hide-with-media"> <!-- This section is only visible if the video is visible -->
                 The video presented here is the portion of the spotlight that features my work. <br />
                 <br />
-                The entire video can be found <a href="https://www.youtube.com/watch?v=I1yjyeR-jMM" target="_blank">here</a>.
-            </p>
+            </div>
+            The entire video can be found <a href="https://www.youtube.com/watch?v=I1yjyeR-jMM" target="_blank">here</a>.
+        </p>
+    </div>
+</div>
+
+<!-- Lower volume of IOL spotlight video -->
+<script>
+    var iolSpot = document.getElementById("iol-spot");
+    iolSpot.volume = 0.35
+</script>
+
+<div class="grid-container">
+    <div class="grid-video-title">NH 603 Challenge (2017)</div>
+    <div class="grid-media"><video height="560" width="317" controls><source src="../res/articles/NH 603 Challenge.mp4" type="video/mp4">
+    </video></div>
+    <div class="grid-item">
+        <p>
+            In June 2017, my colleague, Daroc Alden, and I were asked by the communications department to represent the IOL during The NH 603 challenge, a targeted campaign to raise scholarship funds via a Facebook live post.
+            <br />
+            It was UNH's third annual iteration of The 603 Challenge which rallied 4,246 donors who supported more than 150 programs. The effort raised $414,905 during 150 hours of online giving. 
+            <br />
+            <br />
+            The post can be found <a href="https://www.facebook.com/UNHIOL/videos/listen-to-griffin-leclerc-20-and-daroc-alden-20-talk-about-all-the-reasons-you-s/1700150283404659/?redirect=false" target="_blank">here</a>.
+        </p>
+    </div>
+</div>
+
+<div class="grid-container">
+    <div class="grid-video-title">UNH IOL Recruitment Video (2017)</div>
+    <div class="grid-media"><video width="560" height="315" controls><source src="../res/articles/IOL Video For Approval - UNH Media.mp4" type="video/mp4"></video></div>
+    <div class="grid-item">
+        <p>
+            Of the UNH IOL's 125 student employees, I was chosen as one of four to be featured in a video describing the lab's procedures and employment opportunities. This video is the primary resource used by the IOL to recruit new students. 
+            <br />
+            <br />
+            The video can be viewed <a href="https://media.unh.edu/media/IOL+Video+For+Approval/1_k0eijugy" target="_blank">here</a>.
+        </p>
         </div>
     </div>
-    <script>
-        var iolSpot = document.getElementById("iolSpot");
-        iolSpot.volume = 0.35
-    </script>
+</div>
 
-    <div class="wrapper">
-        <h3 class = "videoTitle">
-            NH 603 Challenge (2017)
-        </h3>
-        <div class="video">
-            <video height="560" width="317" controls><source src="../res/articles/NH 603 Challenge.mp4" type="video/mp4"></video>
-        </div>
-        <div class="description">
-            <p>
-                In June 2017, my colleague, Daroc Alden, and I were asked by the communications department to <br />
-                represent the IOL during The NH 603 challenge, a targeted campaign to raise scholarship funds <br />
-                via a Facebook live post. <br />
-                <br />
-                It was UNH's third annual iteration of The 603 Challenge which rallied 4,246 donors <br />
-                who supported more than 150 programs. The effort raised $414,905 during 150 hours of online giving. <br />
-                <br />
-                The post can be found <a href="https://www.facebook.com/UNHIOL/videos/listen-to-griffin-leclerc-20-and-daroc-alden-20-talk-about-all-the-reasons-you-s/1700150283404659/?redirect=false" target="_blank">here</a>.
-            </p>
-        </div>
-      </div>
-
-    <div class="wrapper">
-        <h3 class = "videoTitle">
-            UNH IOL Recruitment Video (2017)
-        </h3>
-        <div class="video">
-            <video width="560" height="315" controls><source src="../res/articles/IOL Video For Approval - UNH Media.mp4" type="video/mp4"></video>
-        </div>
-        <div class="description">
-            <p>
-                Of the UNH IOL's 125 student employees, I was chosen as one of four to be featured in <br />
-                a video describing the lab's procedures and employment opportunities. This video is <br />
-                the primary resource used by the IOL to recruit new students. <br />
-                <br />
-                The video can be viewed <a href="https://media.unh.edu/media/IOL+Video+For+Approval/1_k0eijugy" target="_blank">here</a>.
-            </p>
-        </div>
-    </div>
-
-    <div class="wrapper">
-        <h3 class = "articleTitle">
-            Innovative Interns (2016)
-        </h3>
+<div class="grid-container">
+    <div class="grid-article-title">Innovative Interns (2016)</div>
+    <div class="grid-media"></div>
+    <div class="grid-item">
         <p class = "entry">
-            When I enrolled at UNH, I was contacted by an alumni department representative, and <br />
-            interviewed about my experience at the UNH IOL both as a high school intern and full time employee. <br />
+            When I enrolled at UNH, I was contacted by an alumni department representative, and interviewed about my experience at the UNH IOL both as a high school intern and full time employee. 
+            <br />
             <br />
             The article summarizing the interview is available <a href="https://www.unh.edu/unhtoday/2016/06/innovative-interns?utm_source=IOL+Internal&utm_campaign=8c838eaa16-EMAIL_CAMPAIGN_2017_01_20&utm_medium=email&utm_term=0_ec920b3a46-8c838eaa16-417039345" target="_blank">here</a>.<br />
             A copy of the article can be viewed <a href="../res/articles/Innovative Interns.pdf" target="_blank">here</a>.
         </p>
     </div>
+</div>
 
-    <div class="wrapper">
-        <h3 class = "articleTitle">
-            From Tech Camp to the IOL (2016)
-        </h3>
+<div class="grid-container">
+    <div class="grid-article-title">From Tech Camp to the IOL (2016)</div>
+    <div class="grid-media"></div>
+    <div class="grid-item">
         <p class = "entry">
-            My first experience at the UNH IOL was through UNH's Tech Camp. Tech Camp is a two-week <br />
-            summer program where middle and high school students are exposed to research being conducted <br />
-            throughout the University. <br />
+            My first experience at the UNH IOL was through UNH's Tech Camp. Tech Camp is a two-week summer program where middle and high school students are exposed to research being conducted throughout the University. 
+            <br /><br />
+            During the first week of the program, students spend half-day periods covering 14 University facilities in order to learn about the research conducted at each. Prior to the second week, each student selects their preferred facility and spends the remainder of their tech camp experience working in that field. 
+            <br /><br />
+            Intrigued, I chose the UNH IOL, for both years I attended tech camp. At the conclusion, the IOL's program director suggested I apply for the internship program, which led to being selected as an HighTech Bound Intern, seven years if student employment at the IOL, a bachelors degree in Computer Science from UNH, and becoming a UNH Graduate Research Assistant. 
+            <br /><br />
+            This interview details my journey through the process. 
+            <br /><br />
+            The article summarizing the interview is available <a href="https://www.iol.unh.edu/blog/2016/08/18/tech-camp-iol" target="_blank">here</a>.
             <br />
-            During the first week of the program, students spend half-day periods covering 14 University <br />
-            facilities in order to learn about the research conducted at each. <br />
-            Prior to the second week, each student selects their preferred facility and spends <br />
-            the remainder of their tech camp experience working in that field. <br />
-            <br />
-            Intrigued, I chose the UNH IOL, for both years I attended tech camp. At the conclusion, <br />
-            the IOL's program director suggested I apply for the internship program., which led to <br />
-            being selected as an HighTech Bound Intern, seven years if student employment at the IOL, <br />
-            a bachelors degree in Computer Science from UNH, and becoming a UNH Graduate Research Assistant. <br />
-            <br />
-            This interview details my journey through the process. <br />
-            <br />
-            The article summarizing the interview is available <a href="https://www.iol.unh.edu/blog/2016/08/18/tech-camp-iol" target="_blank">here</a>.<br />
             A copy of the article can be viewed <a href="../res/articles/From Tech Camp to the IOL.pdf" target="_blank">here</a>.
         </p>
     </div>
+</div>
 
-    <div class="wrapper">
-        <h3 class = "articleTitle">
-            Succeed and Soar in Your Time at the UNH-IOL (2015)
-        </h3>
+<div class="grid-container">
+    <div class="grid-article-title">Succeed and Soar in Your Time at the UNH-IOL (2015)</div>
+    <div class="grid-media"></div>
+    <div class="grid-item">
         <p class = "entry">
-            During my seven week internship at the UNH IOL in the summer of 2015, <br />
-            myself and ten colleagues were asked to compose a letter to future interns <br />
-            so they might feel less intimidated upon hire. <br />
+            During my seven week internship at the UNH IOL in the summer of 2015, myself and ten colleagues were asked to compose a letter to future interns so they might feel less intimidated upon hire. 
             <br />
-            After a review period, where the IOL's hiring manager read and commented on each letter, <br />
-            my letter was chosen and published on the UNH IOL's website. <br />
+            <br />
+            After a review period, where the IOL's hiring manager read and commented on each letter, my letter was chosen and published on the UNH IOL's website. <br />
             <br />
             A link to the publication can be found <a href="https://www.iol.unh.edu/blog/2015/09/04/succeed-and-soar-your-time-unh-iol" target="_blank">here</a>. <br />
             A copy of the publication can be viewed <a href="../res/articles/Succeed and Soar in Your Time at the UNH-IOL.pdf" target="_blank">here</a>.
         </p>
     </div>
+</div>
 
-    <div class="wrapper">
-        <h3 class = "videoTitle">
-            Admitted Students Day at the IOL (2018)
-        </h3>
-        <div class="video">
-            <video controls muted width="560" height="315" controls><source src="../res/articles/Admitted Students Day at the UNH-IOL.mp4" type="video/mp4"></video>
-        </div>
-        <div class="description">
-            <p>
-                Over 100 prospective UNH students visit the IOL to learn about student employment <br />
-                and what freshman year in Computer Science entails. <br />
-                <br />
-                I was one of the three student employees asked to detail the freshman experience. <br />
-                <br />
-                The video can be found <a href="https://www.youtube.com/watch?v=tbTZ3qz0WTo" target="_blank">here</a>.<br />
-                You can locate me presenting to students in a conference room setting.
-            </p>
-        </div>
+<div class="grid-container">
+    <div class="grid-article-title">Admitted Students Day at the IOL (2018)</div>
+    <div class="grid-media"><video controls muted width="560" height="315" controls><source src="../res/articles/Admitted Students Day at the UNH-IOL.mp4" type="video/mp4"></video></div>
+    <div class="grid-item">
+        <p>
+            Over 100 prospective UNH students visit the IOL to learn about student employment  and what freshman year in Computer Science entails. 
+            <br /><br />
+            I was one of the three student employees asked to detail the freshman experience. 
+            <br /><br />
+            The video can be found <a href="https://www.youtube.com/watch?v=tbTZ3qz0WTo" target="_blank">here</a>.<br />
+            You can locate me presenting to students in a conference room setting.
+        </p>
     </div>
+</div>
    
 </body>
 </html>
-
-<!-- 
-    <div class="wrapper">
-        <h3 class = "videoTitle">
-            Video Publication
-        </h3>
-        <div class="video">
-            <video width="" height="" controls><source src="" type="video/mp4"></video>
-        </div>
-        <div class="description">
-            <p>
-                Description of the video <br />
-                <br />
-                link <a href="https://media.unh.edu/media/IOL+Video+For+Approval/1_k0eijugy">here</a>.
-            </p>
-        </div>
-    </div>
- -->
