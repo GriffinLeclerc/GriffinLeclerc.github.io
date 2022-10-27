@@ -93,6 +93,19 @@
     </div>
 </div>
 
+<!-- <div class="grid-container">
+    <div class="grid-software-title">UNH Tech Camp Capstone Maintainability (2022)</div>
+    <div class="grid-media">
+        <video controls muted width="560" height="335" controls><source src="../res/projects/Trains in motion.mp4" type="video/mp4"></video>
+    </div>
+    <div class="grid-item">
+        <p class = "entry">
+            This project is a continuation of 
+            <a href="https://griffinleclerc.github.io/pages/projects.html#tech-camp-2019">UNH Tech Camp Capstone Railway Augmentation (2019)</a>.
+        </p>
+    </div>
+</div> -->
+
 <div class="grid-container">
     <div class="grid-physical-title">High Performance Computing Cluster Construction (2021)</div>
     <div class="grid-media">
@@ -116,29 +129,35 @@
     </div>
 </div>
 
+<div id="tech-camp-2019"></div>
 <div class="grid-container">
-    <div class="grid-software-title">UNH Tech Camp Capstone (2019)</div>
+    <div class="grid-software-title">UNH Tech Camp Capstone Railway Augmentation (2019)</div>
     <div class="grid-media">
         <video controls muted width="560" height="335" controls><source src="../res/projects/Trains in motion.mp4" type="video/mp4"></video>
     </div>
     <div class="grid-item">
         <p class = "entry">
-            In the summer of 2019, I was a volunteer staff member at UNH Tech Camp, a week long summer camp for middle and high school students. The tech camp experience involves a variety of instructors who teach students about various STEM topics. I led the Computer Science portion, where I instructed 15 students about programming basics. I also supported the Networking and Electrical Engineering segments of the program. 
+            In the summer of 2019, I was a volunteer staff member at UNH Tech Camp, a week long summer camp for middle and high school students. The tech camp experience involves a variety of instructors who teach students about various STEM topics. I was the primary instructor during the Computer Science lecture series, where I taught 15 students introductory programming skills. I also supported the Networking and Electrical Engineering segments of the program.
             <br />
             <br />
-            We began by familiarizing ourselves with Raspberry Pi's and Arduino. Using the <a href="https://www.dexterindustries.com/arduberry/" target="_blank">Arduberry</a> shield, we intercepted various currents to a train set and used them to manipulate the trains' movements. Six sets of two relays connected to the Pi's performed the following functions: <br />
+            Most other UNH Tech Camp programs had concrete deliverables which students could display to their guests at the conclusion of the program to demonstrate what they had learned. For example, the marine biology and ocean engineering departments would teach students about the construction of underwater exploration vehicles. During this lesson plan, students were given the opportunity to construct a miniature submarine using preexisting components and operate it in one of UNH's controlled aquatic environments.
+            <br />
+            <br />
+            Thanks to this physical showcase, parents were able to quickly and easily understand the topics discussed during the program. The same was not true for the Computer Science, Networking, and Electrical Engineering program hosted at the UNH Interoperability Lab. During the end of week showcase, students would often show their parents code they had written on a laptop screen or a basic circuit they had constructed. Parents often had difficulty understanding the topics their child had learned due to this informality.
+            <br />
+            <br />
+            The UNH IOL sought to remedy this situation by developing a pre-built showcase that the students would operate at the conclusion of the program to demonstrate their knowledge. After a few brainstorming sessions during planning meetings, we determined the best course was to augment a model train set using small single-board computers connected to hardware relays. This would allow the campers to easily intercept various currents to the train set and use them to manipulate the trains' movements.
+            <br />
+            <br />
+            We began by familiarizing ourselves with Raspberry Pi's and the <a href="https://www.dexterindustries.com/arduberry/" target="_blank">Arduberry</a> shield. Six sets of two relays connected to the Pi's performed the following functions: <br />
             Turning the trains on and off by disconnecting the main power to/from the track; <br />
             Increasing or decreasing the speed of the trains by changing the supplied voltage between 5 and 10 volts; <br />
             Changing direction of the trains by swapping the current to each track from + to - and vice versa; <br />
             Changing the direction of three forks by providing an electric pulse to the track's magnetic coil; <br />
-            Finally, there was one Raspberry Pi deemed the Master Pi. This Pi maintained ssh connections to the <br />
-            others for ease of access/calibration. 
+            Finally, there was one Raspberry Pi deemed the Master Pi. This Pi maintained ssh connections to the others for ease of access/calibration. 
             <br />
             <br />
-            The final challenge required campers to use all of the Raspberry Pi's to complete a timing-based puzzle. 
-            <br />
-            <br />
-            At the conclusion, students displayed their knowledge to their parents and peers in an showcase finale. A team of IOL employees, including myself, developed this capstone showcase.
+            At the conclusion of the program, students successfully displayed their knowledge to their parents and peers during the final showcase event using the augmented train set.
         </p>
     </div>
 </div>
@@ -189,17 +208,16 @@
     <div class="grid-item">
         <p class = "entry">
             Thanks to the website <a href="https://wttr.in" target="_blank">wttr.in</a>, I was able to gather weather data in json format: <br />
-            <a href="https://wttr.in/?format=j1" target="_blank">wttr.in/?format=j1</a><br />
-            It was rather simple once I located the information I was interested in capturing. 
+            <a href="https://wttr.in/?format=j1" target="_blank">wttr.in/?format=j1</a>
             <br />
             <br />
-            Because my phone provider for allows sending of texts over SMTP, I am now able to notify myself of the weather conditions each morning.
+            This project pulls interesting and distilled weather data in my area and sends it to me each morning via SMTP to SMS translation available from my phone service provider.
             <br />
             <br />
-            In addition to learning more about json, I learned about the use of external configuration files and bash scripting.
+            This project required me to learn how to parse json files, use of external configuration files (ini), bash scripting and crontab (a scheduled execution framework).
             <br />
             <br />
-            I decided to use a configuration file for users to specify their location and recipients, rather than having them edit the script directly. I then wrote a bash script to first generate the configuration file, request (and wait for) the user to fill relevant information, then execute the weather sending portion of the script using that information. 
+            I decided to use a configuration file for users to specify their location, recipients, and mail server, rather than having to edit the script directly. I then wrote a bash script to first generate the configuration file, request (and wait for) the user to fill relevant information, then execute the weather sending portion of the script using that information. 
             <br />
             <br />
             Finally, in order to protect the user's privacy, the script requires the user to create two system environment variables to access their email address and password. This discourages users from storing their sensitive information in plain text. 
