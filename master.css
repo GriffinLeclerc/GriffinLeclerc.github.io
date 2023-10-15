@@ -182,9 +182,9 @@ li {
 */
 @media only screen and (max-width: 440px) {
   /* hide list elements > 3rd */
-  li:nth-of-type(1n+4) {
+  /* li:nth-of-type(1n+4) {
     display:none;
-  }
+  } */
 
   /* Consider changing the nav bar style when all elements no longer fit */
   /* ul.navBar {
